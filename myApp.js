@@ -2,12 +2,10 @@ let express = require('express');
 const res = require('express/lib/response');
 let app = express();
 
-console.log('Hello World');
-
 app.get('/', (req, res) => {
-    absoluteStaticPath = __dirname + '/public';
-    app.use(express.static(absoluteStaticPath));
-    });
+    absolutePath = __dirname;
+    res.sendFile(absolutePath + '/views/index.html');
+});
 
 
 
